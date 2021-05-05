@@ -1,13 +1,15 @@
 import threading
 import time
 
-print("Some string in thread2_")
+print("Some string in thread2_.py")
 
 
 class Action(threading.Thread):
-    def __init__(self, name):
+    def __init__(self):
         threading.Thread.__init__(self)
-        self.name = name
+        # name is a attr to show for identifying a thread when there is some error occurred in a single thread.
+        # self.name="work"
+        print("{} thread has inited".format(self.name))
 
     def run(self):
         print("Thread {} start".format(self.name))
@@ -21,8 +23,8 @@ class Action(threading.Thread):
 
 
 if __name__ == '__main__':
-    thread1 = Action("work")
-    thread2 = Action("rest")
+    thread1 = Action()
+    thread2 = Action()
 
     thread1.start()
     thread2.start()
