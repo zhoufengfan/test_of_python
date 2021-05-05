@@ -1,6 +1,8 @@
 import threading
 import time
 
+print("Some string in thread2_")
+
 
 class Action(threading.Thread):
     def __init__(self, name):
