@@ -9,6 +9,7 @@ class Action(threading.Thread):
         threading.Thread.__init__(self)
         # name is a attr to show for identifying a thread when there is some error occurred in a single thread.
         # self.name="work"
+        # If one hasn't specified the name, the name of the Thread will be Thread-i(i is 1,2,3,4,5,6,...)
         print("{} thread has inited".format(self.name))
 
     def run(self):
