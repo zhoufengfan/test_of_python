@@ -2,6 +2,7 @@
 !*/
 !*.py
 !*.md
+!*.yml
 !.gitignore
 !*.ipynb
 .ipynb_checkpoints

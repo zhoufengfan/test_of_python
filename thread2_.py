@@ -18,6 +18,7 @@ class Action(threading.Thread):
         print("Thread {} start".format(self.name))
         self.foo(self.name)
         print("Thread {} finish".format(self.name))
+        return self.name
 
     def foo(self, thread_name):
         for i in range(5):
