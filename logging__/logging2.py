@@ -3,8 +3,8 @@ import logging
 from rich.logging import RichHandler
 
 if __name__ == '__main__':
-    use_rich_handler = True
-    logging.basicConfig(filename='some_log.log',
+    use_rich_handler = False
+    logging.basicConfig(filename=r'D:\some_log.log',
                         filemode="w",
                         format='%(levelname)s\t%(message)s\t%(asctime)s\t%(pathname)s\tLine:%(lineno)d',
                         level=logging.DEBUG)
@@ -17,4 +17,7 @@ if __name__ == '__main__':
     logging.debug("[bold red blink]debug message[/]", extra={"markup": True})
     logging.info('Info message')
     logging.warning('Warning message')
-    # foo2()
+    try:
+        raise RuntimeError("sdfsa")
+    except Exception as exception:
+        logging.exception(exception)
