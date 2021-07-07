@@ -3,7 +3,7 @@ import logging
 from rich.logging import RichHandler
 
 if __name__ == '__main__':
-    use_rich_handler = False
+    use_rich_handler = True
     logging.basicConfig(filename=r'D:\some_log.log',
                         filemode="w",
                         format='%(levelname)s\t%(message)s\t%(asctime)s\t%(pathname)s\tLine:%(lineno)d',
